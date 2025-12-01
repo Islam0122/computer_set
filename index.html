@@ -3,484 +3,1342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Компьютерные сети — Презентация</title>
+    <title>Компьютерные сети — Интерактивная презентация</title>
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet"
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
     >
     <!-- Bootstrap Icons -->
-    <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    >
+    <!-- Animate.css for animations -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
 </head>
 <body>
-    <div class="slide-counter">
-        <span id="currentSlide">0</span> / <span id="totalSlides">7</span>
+<!-- Progress Bar -->
+<div class="progress-container fixed-top">
+    <div class="progress" style="height: 6px; border-radius: 0;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated"
+             id="globalProgress"
+             style="width: 0%; background: linear-gradient(90deg, #4a90e2, #5dade2);">
+        </div>
+    </div>
+</div>
+
+<!-- Slide Counter -->
+<div class="slide-counter position-fixed top-0 end-0 m-4">
+    <div class="card border-primary bg-dark">
+        <div class="card-body p-3">
+                <span class="fs-5">
+                    <i class="bi bi-file-slides me-2"></i>
+                    <span id="currentSlide">1</span>/<span id="totalSlides">8</span>
+                </span>
+        </div>
+    </div>
+</div>
+
+<!-- Main Container -->
+<div class="container-fluid py-5 px-4 px-lg-5">
+    <!-- Slide 0: Title -->
+    <div class="slide active" id="slide0">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-12 col-lg-8 col-xl-6">
+                <div class="card border-0 shadow-lg animate__animated animate__fadeIn">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h1 class="display-4 fw-bold mb-2">
+                            <i class="bi bi-hdd-network me-3"></i>
+                            КОМПЬЮТЕРНЫЕ СЕТИ
+                        </h1>
+                        <p class="lead mb-0 opacity-75">
+                            Интерактивная образовательная презентация
+                        </p>
+                    </div>
+
+                    <div class="card-body bg-dark text-white p-5">
+                        <div class="text-center mb-5">
+                            <div class="mb-4">
+                                <i class="bi bi-lightning-charge-fill text-warning fs-1 me-3"></i>
+                                <i class="bi bi-globe text-info fs-1 me-3"></i>
+                                <i class="bi bi-shield-check text-success fs-1"></i>
+                            </div>
+                            <p class="fs-5 mb-4 opacity-75">
+                                Исследуйте мир сетевых технологий от основ до современных решений
+                            </p>
+                        </div>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-4">
+                                <div class="text-center p-3 border border-info rounded">
+                                    <i class="bi bi-clock-history text-info fs-2 mb-2"></i>
+                                    <p class="mb-0">История развития</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center p-3 border border-success rounded">
+                                    <i class="bi bi-gear text-success fs-2 mb-2"></i>
+                                    <p class="mb-0">Технологии</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center p-3 border border-warning rounded">
+                                    <i class="bi bi-patch-check text-warning fs-2 mb-2"></i>
+                                    <p class="mb-0">Тестирование</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-lg px-5 py-3 fw-bold animate__animated animate__pulse animate__infinite"
+                                    onclick="nextSlide()">
+                                <i class="bi bi-play-fill me-2"></i>
+                                НАЧАТЬ ПУТЕШЕСТВИЕ
+                            </button>
+                            <p class="mt-3 opacity-50">
+                                Используйте ← → на клавиатуре или кнопки навигации
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- Slide 1: History -->
+    <div class="slide" id="slide1">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="card border-0 shadow-lg animate__animated animate__slideInRight">
+                    <div class="card-header bg-info text-white">
+                        <h2 class="mb-0">
+                            <i class="bi bi-journal-bookmark-fill me-2"></i>
+                            История компьютерных сетей
+                        </h2>
+                    </div>
+                    <div class="card-body bg-light text-dark p-4 p-md-5">
+                        <div class="timeline">
+                            <div class="timeline-item animate__animated animate__fadeInUp">
+                                <div class="timeline-badge bg-primary">1960</div>
+                                <div class="card border-primary mb-3">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-cpu me-2"></i>
+                                            Зарождение в СССР
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Первые эксперименты по соединению компьютеров в единую систему.
+                                            Ленинградские институты разрабатывают протоколы обмена данными.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item animate__animated animate__fadeInUp animate__delay-1s">
+                                <div class="timeline-badge bg-danger">1969</div>
+                                <div class="card border-danger mb-3">
+                                    <div class="card-header bg-danger text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-flag-fill me-2"></i>
+                                            Революция ARPANET
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Министерство обороны США создает ARPANET — первую сеть с коммутацией
+                                            пакетов.
+                                            Первое сообщение между университетами UCLA и Stanford.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item animate__animated animate__fadeInUp animate__delay-2s">
+                                <div class="timeline-badge bg-warning">1980</div>
+                                <div class="card border-warning mb-3">
+                                    <div class="card-header bg-warning text-dark">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-building me-2"></i>
+                                            Развитие в СССР
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Создание локальных сетей для научных институтов в Ленинграде и Москве.
+                                            Разработка отечественных протоколов передачи данных.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item animate__animated animate__fadeInUp animate__delay-3s">
+                                <div class="timeline-badge bg-success">1991</div>
+                                <div class="card border-success mb-3">
+                                    <div class="card-header bg-success text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-globe-americas me-2"></i>
+                                            Эра Интернета
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Тим Бернерс-Ли создает WWW (World Wide Web).
+                                            Появление первых веб-браузеров и сайтов. Интернет становится доступен всем.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Basics -->
+    <div class="slide" id="slide2">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="card border-0 shadow-lg animate__animated animate__slideInLeft">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">
+                            <i class="bi bi-tools me-2"></i>
+                            Основы компьютерных сетей
+                        </h2>
+                    </div>
+                    <div class="card-body bg-light text-dark p-4 p-md-5">
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-diagram-3 me-2"></i>
+                                            Типы сетей по масштабу
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <span class="badge bg-info me-2">PAN</span>
+                                                Персональная сеть (Bluetooth, USB)
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="badge bg-success me-2">LAN</span>
+                                                Локальная сеть (офис, дом)
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="badge bg-warning me-2">MAN</span>
+                                                Городская сеть
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="badge bg-danger me-2">WAN</span>
+                                                Глобальная сеть (Интернет)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card h-100 border-info">
+                                    <div class="card-header bg-info text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-file-earmark-code me-2"></i>
+                                            Основные протоколы
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <span class="badge bg-dark me-2">TCP/IP</span>
+                                                Основа Интернета
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="badge bg-primary me-2">HTTP/S</span>
+                                                Веб-протоколы
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="badge bg-success me-2">FTP</span>
+                                                Передача файлов
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="badge bg-warning me-2">DNS</span>
+                                                Система доменных имен
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="text-center mb-4 text-primary">
+                            <i class="bi bi-node-plus me-2"></i>
+                            Топологии сетей
+                        </h4>
+
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card text-center h-100 border-warning animate__animated animate__pulse">
+                                    <div class="card-body">
+                                        <div class="display-1 mb-3">⭐</div>
+                                        <h5 class="card-title text-warning">Звезда</h5>
+                                        <p class="card-text">
+                                            Все узлы связаны с центральным коммутатором.
+                                            Отказ одного узла не влияет на остальные.
+                                        </p>
+                                        <span class="badge bg-warning">Надежность</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card text-center h-100 border-info animate__animated animate__pulse animate__delay-1s">
+                                    <div class="card-body">
+                                        <div class="display-1 mb-3">━━━</div>
+                                        <h5 class="card-title text-info">Шина</h5>
+                                        <p class="card-text">
+                                            Линейное соединение через общий кабель.
+                                            Простая, но уязвимая к обрывам.
+                                        </p>
+                                        <span class="badge bg-info">Простота</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card text-center h-100 border-success animate__animated animate__pulse animate__delay-2s">
+                                    <div class="card-body">
+                                        <div class="display-1 mb-3">⭕</div>
+                                        <h5 class="card-title text-success">Кольцо</h5>
+                                        <p class="card-text">
+                                            Замкнутая цепь. Данные идут в одном направлении.
+                                            Равномерное распределение нагрузки.
+                                        </p>
+                                        <span class="badge bg-success">Баланс</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: How Networks Work -->
+    <div class="slide" id="slide3">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="card border-0 shadow-lg animate__animated animate__slideInUp">
+                    <div class="card-header bg-warning text-dark">
+                        <h2 class="mb-0">
+                            <i class="bi bi-lightning-charge me-2"></i>
+                            Как работают компьютерные сети
+                        </h2>
+                    </div>
+                    <div class="card-body bg-light text-dark p-4 p-md-5">
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-6">
+                                <div class="card h-100 border-danger">
+                                    <div class="card-header bg-danger text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-layers me-2"></i>
+                                            Модель OSI (7 уровней)
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="osi-model">
+                                            <div class="osi-layer"
+                                                 style="background: linear-gradient(90deg, #e74c3c, #c0392b);">
+                                                <span class="layer-number">7</span>
+                                                <span class="layer-name">Прикладной</span>
+                                                <small>HTTP, FTP, SMTP</small>
+                                            </div>
+                                            <div class="osi-layer"
+                                                 style="background: linear-gradient(90deg, #e67e22, #d35400);">
+                                                <span class="layer-number">6</span>
+                                                <span class="layer-name">Представительский</span>
+                                                <small>Шифрование, сжатие</small>
+                                            </div>
+                                            <div class="osi-layer"
+                                                 style="background: linear-gradient(90deg, #f39c12, #e67e22);">
+                                                <span class="layer-number">5</span>
+                                                <span class="layer-name">Сеансовый</span>
+                                                <small>Управление сеансами</small>
+                                            </div>
+                                            <div class="osi-layer"
+                                                 style="background: linear-gradient(90deg, #2ecc71, #27ae60);">
+                                                <span class="layer-number">4</span>
+                                                <span class="layer-name">Транспортный</span>
+                                                <small>TCP, UDP</small>
+                                            </div>
+                                            <div class="osi-layer"
+                                                 style="background: linear-gradient(90deg, #3498db, #2980b9);">
+                                                <span class="layer-number">3</span>
+                                                <span class="layer-name">Сетевой</span>
+                                                <small>IP, маршрутизация</small>
+                                            </div>
+                                            <div class="osi-layer"
+                                                 style="background: linear-gradient(90deg, #9b59b6, #8e44ad);">
+                                                <span class="layer-number">2</span>
+                                                <span class="layer-name">Канальный</span>
+                                                <small>Ethernet, Wi-Fi</small>
+                                            </div>
+                                            <div class="osi-layer"
+                                                 style="background: linear-gradient(90deg, #34495e, #2c3e50);">
+                                                <span class="layer-number">1</span>
+                                                <span class="layer-name">Физический</span>
+                                                <small>Кабели, радиоволны</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="card h-100 border-success">
+                                    <div class="card-header bg-success text-white">
+                                        <h5 class="mb-0">
+                                            <i class="bi bi-diagram-2 me-2"></i>
+                                            Принцип передачи данных
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="transmission-steps">
+                                            <div class="step">
+                                                <span class="step-number">1</span>
+                                                <div class="step-content">
+                                                    <strong>Создание данных</strong>
+                                                    <p class="mb-0 small">Приложение создает данные (письмо, запрос)</p>
+                                                </div>
+                                            </div>
+                                            <div class="step">
+                                                <span class="step-number">2</span>
+                                                <div class="step-content">
+                                                    <strong>Разбиение на пакеты</strong>
+                                                    <p class="mb-0 small">Данные разбиваются на пакеты 500-1500 байт</p>
+                                                </div>
+                                            </div>
+                                            <div class="step">
+                                                <span class="step-number">3</span>
+                                                <div class="step-content">
+                                                    <strong>Добавление заголовка</strong>
+                                                    <p class="mb-0 small">IP-адреса отправителя и получателя</p>
+                                                </div>
+                                            </div>
+                                            <div class="step">
+                                                <span class="step-number">4</span>
+                                                <div class="step-content">
+                                                    <strong>Маршрутизация</strong>
+                                                    <p class="mb-0 small">Маршрутизаторы находят оптимальный путь</p>
+                                                </div>
+                                            </div>
+                                            <div class="step">
+                                                <span class="step-number">5</span>
+                                                <div class="step-content">
+                                                    <strong>Передача</strong>
+                                                    <p class="mb-0 small">Пакеты идут разными путями</p>
+                                                </div>
+                                            </div>
+                                            <div class="step">
+                                                <span class="step-number">6</span>
+                                                <div class="step-content">
+                                                    <strong>Сборка</strong>
+                                                    <p class="mb-0 small">Сборка и проверка целостности</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary mt-4">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">
+                                    <i class="bi bi-broadcast me-2"></i>
+                                    Визуализация передачи пакета
+                                </h5>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="network-animation mb-3">
+                                    <div class="computer computer-a">
+                                        <i class="bi bi-pc-display-horizontal fs-1"></i>
+                                        <div class="computer-label">Отправитель</div>
+                                    </div>
+                                    <div class="packet animate__animated animate__bounce animate__infinite">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </div>
+                                    <div class="network-path"></div>
+                                    <div class="computer computer-b">
+                                        <i class="bi bi-laptop fs-1"></i>
+                                        <div class="computer-label">Получатель</div>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    <i class="bi bi-info-circle me-1"></i>
+                                    Красный конверт — пакет данных, движущийся через сеть
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Applications -->
+    <div class="slide" id="slide4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="card border-0 shadow-lg animate__animated animate__slideInRight">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="mb-0">
+                            <i class="bi bi-globe2 me-2"></i>
+                            Применение компьютерных сетей
+                        </h2>
+                    </div>
+                    <div class="card-body bg-light text-dark p-4 p-md-5">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card h-100 border-info">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-mortarboard-fill text-info fs-1 mb-3"></i>
+                                        <h5 class="card-title">Образование</h5>
+                                        <p class="card-text small">
+                                            Дистанционное обучение, электронные библиотеки,
+                                            видеолекции, совместные проекты
+                                        </p>
+                                        <span class="badge bg-info">E-Learning</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card h-100 border-success">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-briefcase-fill text-success fs-1 mb-3"></i>
+                                        <h5 class="card-title">Бизнес</h5>
+                                        <p class="card-text small">
+                                            Видеоконференции, облачные решения,
+                                            онлайн-банкинг, электронная коммерция
+                                        </p>
+                                        <span class="badge bg-success">E-Commerce</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card h-100 border-warning">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-controller text-warning fs-1 mb-3"></i>
+                                        <h5 class="card-title">Развлечения</h5>
+                                        <p class="card-text small">
+                                            Социальные сети, стриминг,
+                                            онлайн-игры, медиа контент
+                                        </p>
+                                        <span class="badge bg-warning">Streaming</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card h-100 border-danger">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-house-gear-fill text-danger fs-1 mb-3"></i>
+                                        <h5 class="card-title">Умные технологии</h5>
+                                        <p class="card-text small">
+                                            Умный дом, IoT устройства,
+                                            носимые гаджеты, умные города
+                                        </p>
+                                        <span class="badge bg-danger">IoT</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <h4 class="text-center mb-4">
+                                <i class="bi bi-hdd-rack me-2 text-secondary"></i>
+                                Сетевое оборудование
+                            </h4>
+                            <div class="row g-3">
+                                <div class="col-6 col-md-4 col-lg-2">
+                                    <div class="text-center p-2">
+                                        <i class="bi bi-router fs-2 text-primary mb-2"></i>
+                                        <p class="mb-0 small">Роутеры</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-2">
+                                    <div class="text-center p-2">
+                                        <i class="bi bi-ethernet fs-2 text-info mb-2"></i>
+                                        <p class="mb-0 small">Коммутаторы</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-2">
+                                    <div class="text-center p-2">
+                                        <i class="bi bi-wifi fs-2 text-success mb-2"></i>
+                                        <p class="mb-0 small">Wi-Fi точки</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-2">
+                                    <div class="text-center p-2">
+                                        <i class="bi bi-server fs-2 text-warning mb-2"></i>
+                                        <p class="mb-0 small">Серверы</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-2">
+                                    <div class="text-center p-2">
+                                        <i class="bi bi-shield-check fs-2 text-danger mb-2"></i>
+                                        <p class="mb-0 small">Firewall</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-2">
+                                    <div class="text-center p-2">
+                                        <i class="bi bi-usb-drive fs-2 text-secondary mb-2"></i>
+                                        <p class="mb-0 small">Кабели</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Quiz -->
+    <div class="slide" id="slide5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="card border-0 shadow-lg animate__animated animate__slideInUp">
+                    <div class="card-header bg-danger text-white">
+                        <h2 class="mb-0">
+                            <i class="bi bi-patch-question me-2"></i>
+                            Проверь свои знания!
+                        </h2>
+                    </div>
+                    <div class="card-body bg-light text-dark p-4 p-md-5">
+                        <div class="quiz-header mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="mb-0">Тест из 10 вопросов</h4>
+                                <span class="badge bg-danger fs-6" id="questionCounter">0/10</span>
+                            </div>
+                            <div class="progress mb-4" style="height: 10px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                     id="progressBar"
+                                     style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="quiz-container">
+                            <!-- Question 1 -->
+                            <div class="quiz-question card mb-3" data-question="1">
+                                <div class="card-body">
+                                    <h5 class="card-title">1. Что означает аббревиатура LAN?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 1)">
+                                                A) Длинная антенная сеть
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 1)">
+                                                B) Локальная вычислительная сеть
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 1)">
+                                                C) Линейная аналоговая система
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 1)">
+                                                D) Лазерная навигационная сеть
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div class="quiz-question card mb-3" data-question="2">
+                                <div class="card-body">
+                                    <h5 class="card-title">2. В каком году была создана сеть ARPANET?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 2)">
+                                                A) 1959
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 2)">
+                                                B) 1969
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 2)">
+                                                C) 1979
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 2)">
+                                                D) 1989
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 3 -->
+                            <div class="quiz-question card mb-3" data-question="3">
+                                <div class="card-body">
+                                    <h5 class="card-title">3. Что означает аббревиатура WAN?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 3)">
+                                                A) Глобальная сеть
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 3)">
+                                                B) Беспроводной адаптер сети
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 3)">
+                                                C) Локальная сеть
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 3)">
+                                                D) Кабельный протокол
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 4 -->
+                            <div class="quiz-question card mb-3" data-question="4">
+                                <div class="card-body">
+                                    <h5 class="card-title">4. Какой протокол отвечает за доставку web-страниц?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 4)">
+                                                A) HTTP / HTTPS
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 4)">
+                                                B) FTP
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 4)">
+                                                C) SMTP
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 4)">
+                                                D) DNS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 5 -->
+                            <div class="quiz-question card mb-3" data-question="5">
+                                <div class="card-body">
+                                    <h5 class="card-title">5. Что делает протокол DNS?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 5)">
+                                                A) Преобразует домены в IP-адреса
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 5)">
+                                                B) Передаёт электронные письма
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 5)">
+                                                C) Шифрует данные пользователя
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 5)">
+                                                D) Настраивает маршрутизатор
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 6 -->
+                            <div class="quiz-question card mb-3" data-question="6">
+                                <div class="card-body">
+                                    <h5 class="card-title">6. Какой кабель используется в Ethernet-сетях?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 6)">
+                                                A) Витая пара (UTP)
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 6)">
+                                                B) Коаксиальный телевизионный кабель
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 6)">
+                                                C) Шнур питания
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 6)">
+                                                D) Оптический лучевой провод
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 7 -->
+                            <div class="quiz-question card mb-3" data-question="7">
+                                <div class="card-body">
+                                    <h5 class="card-title">7. Какой тип сети используется в кафе, школах и дома?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 7)">
+                                                A) WLAN (беспроводная локальная сеть)
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 7)">
+                                                B) MAN — городская сеть
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 7)">
+                                                C) SAN — система хранения данных
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 7)">
+                                                D) VPN — виртуальный канал
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 8 -->
+                            <div class="quiz-question card mb-3" data-question="8">
+                                <div class="card-body">
+                                    <h5 class="card-title">8. Какой протокол используется для отправки электронной
+                                        почты?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 8)">
+                                                A) SMTP
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 8)">
+                                                B) POP3
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 8)">
+                                                C) IMAP
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 8)">
+                                                D) FTP
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 9 -->
+                            <div class="quiz-question card mb-3" data-question="9">
+                                <div class="card-body">
+                                    <h5 class="card-title">9. Какой протокол используется для передачи файлов?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 9)">
+                                                A) DHCP
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 9)">
+                                                B) FTP
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 9)">
+                                                C) ARP
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 9)">
+                                                D) ICMP
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 10 -->
+                            <div class="quiz-question card mb-3" data-question="10">
+                                <div class="card-body">
+                                    <h5 class="card-title">10. Какой прибор распределяет трафик между компьютерами в
+                                        локальной сети?</h5>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, true, 10)">
+                                                A) Коммутатор (Switch)
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 10)">
+                                                B) Блок питания
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 10)">
+                                                C) Принтер
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary w-100 text-start"
+                                                    onclick="checkAnswer(this, false, 10)">
+                                                D) Сканер
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="alert alert-info mt-4">
+                                <i class="bi bi-info-circle me-2"></i>
+                                Ответьте на все вопросы, чтобы перейти к результатам
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Results -->
+    <div class="slide" id="slide6">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="card border-0 shadow-lg animate__animated animate__slideInUp">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">
+                            <i class="bi bi-trophy me-2"></i>
+                            Результаты теста
+                        </h2>
+                    </div>
+                    <div class="card-body text-center p-5">
+                        <div class="mb-5">
+                            <h4 class="text-primary mb-4">Ваш результат:</h4>
+                            <div class="display-1 fw-bold text-success mb-3" id="finalScore">0/10</div>
+                            <div class="h3 mb-4" id="gradeText">...</div>
+                            <div class="alert alert-info" id="resultMessage">...</div>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card border-warning">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <i class="bi bi-arrow-clockwise me-2"></i>
+                                            Пройти заново
+                                        </h5>
+                                        <button class="btn btn-warning w-100 mt-3" onclick="retryQuiz()">
+                                            <i class="bi bi-arrow-repeat me-2"></i>
+                                            Попробовать снова
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-primary">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <i class="bi bi-graph-up me-2"></i>
+                                            Ваша статистика
+                                        </h5>
+                                        <div class="mt-3">
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Правильных ответов:</span>
+                                                <span class="fw-bold" id="correctAnswers">0</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Неправильных ответов:</span>
+                                                <span class="fw-bold" id="wrongAnswers">0</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span>Процент успеха:</span>
+                                                <span class="fw-bold" id="successRate">0%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Conclusion -->
+    <div class="slide" id="slide7">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="card border-0 shadow-lg animate__animated animate__fadeIn">
+                    <div class="card-header bg-gradient text-white"
+                         style="background: linear-gradient(135deg, #1e3c72, #2a5298);">
+                        <h2 class="mb-0">
+                            <i class="bi bi-stars me-2"></i>
+                            Заключение
+                        </h2>
+                    </div>
+                    <div class="card-body text-center p-5">
+                        <div class="mb-5">
+                            <i class="bi bi-globe fs-1 text-primary mb-4"></i>
+                            <h3 class="text-primary mb-3">
+                                Компьютерные сети изменили мир
+                            </h3>
+                            <p class="lead">
+                                От первых экспериментов до глобального Интернета,<br>
+                                соединяющего миллиарды устройств
+                            </p>
+                        </div>
+
+                        <div class="card border-primary mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">
+                                    <i class="bi bi-check-circle me-2 text-success"></i>
+                                    Что мы узнали:
+                                </h5>
+                                <div class="row text-start">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Историю
+                                                развития сетей
+                                            </li>
+                                            <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Типы сетей и
+                                                протоколы
+                                            </li>
+                                            <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Модель OSI и
+                                                передачу данных
+                                            </li>
+                                            <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Топологии
+                                                сетей
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Практическое
+                                                применение
+                                            </li>
+                                            <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Сетевое
+                                                оборудование
+                                            </li>
+                                            <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Технологии
+                                                будущего
+                                            </li>
+                                            <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Основы
+                                                безопасности
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="alert alert-success">
+                                <h5 class="alert-heading">
+                                    <i class="bi bi-share-fill me-2"></i>
+                                    Сети объединяют мир!
+                                </h5>
+                                <p class="mb-0">
+                                    Они делают нашу жизнь связанной, открывают новые возможности<br>
+                                    и сближают людей по всему миру! 🌍
+                                </p>
+                            </div>
+
+                            <div class="mt-4">
+                                <h4>Спасибо за внимание!</h4>
+                                <p class="text-muted">
+                                    <i class="bi bi-rocket-takeoff me-1"></i>
+                                    Удачи в изучении компьютерных сетей!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="navigation fixed-bottom mb-4">
     <div class="container">
-        <div class="slide active" id="slide0">
-            <h1>🖥️ КОМПЬЮТЕРНЫЕ СЕТИ</h1>
-            <div class="retro-box" style="text-align: center; padding: 40px;">
-                <p style="font-size: 1.5em; margin-bottom: 30px;">
-                    Интерактивная презентация в стиле<br>
-                    ленинградских компьютерных лабораторий
-                </p>
-                <p style="font-size: 1.2em; color: #5dade2;">
-                    История • Технологии • Применение • Тестирование
-                </p>
-                <button class="start-btn" onclick="nextSlide()" style="margin-top: 30px;">
-                    ► НАЧАТЬ ПРЕЗЕНТАЦИЮ
-                </button>
-            </div>
-        </div>
-
-        <!-- Слайд 1: История -->
-        <div class="slide" id="slide1">
-            <h2>📜 История компьютерных сетей</h2>
-            
-            <div class="info-section">
-                <h3>Зарождение (1960-е годы)</h3>
-                <p>В СССР начинаются первые эксперименты по соединению компьютеров в единую систему. Ленинградские институты разрабатывают первые протоколы обмена данными между вычислительными машинами.</p>
-            </div>
-
-            <div class="info-section">
-                <h3>Революция ARPANET (1969)</h3>
-                <p>Министерство обороны США создает ARPANET — первую сеть с коммутацией пакетов. Это становится основой будущего Интернета. Первое сообщение передано между университетами UCLA и Stanford.</p>
-            </div>
-
-            <div class="info-section">
-                <h3>Развитие в СССР (1970-80-е)</h3>
-                <p>В Ленинграде и Москве создаются локальные вычислительные сети для научных институтов. Разрабатываются отечественные протоколы передачи данных. Появляются первые терминальные сети в университетах.</p>
-            </div>
-
-            <div class="info-section">
-                <h3>Эра Интернета (1991)</h3>
-                <p>Тим Бернерс-Ли создает WWW (World Wide Web) — всемирную паутину. Появляются первые веб-браузеры и сайты. Интернет становится доступен широкой публике.</p>
-            </div>
-        </div>
-
-        <!-- Слайд 2: Основы -->
-        <div class="slide" id="slide2">
-            <h2>🔧 Основы компьютерных сетей</h2>
-            
-            <div class="retro-box">
-                <h3>Типы сетей по масштабу</h3>
-                <p><span class="highlight">PAN (Personal Area Network):</span> Персональная сеть — Bluetooth, USB между устройствами одного пользователя (до 10 метров)</p>
-                <p><span class="highlight">LAN (Local Area Network):</span> Локальная сеть — соединяет компьютеры в одном здании, офисе или кампусе (до нескольких километров)</p>
-                <p><span class="highlight">MAN (Metropolitan Area Network):</span> Городская сеть — покрывает территорию города (до 100 км)</p>
-                <p><span class="highlight">WAN (Wide Area Network):</span> Глобальная сеть — связывает компьютеры по всему миру. Интернет — самая большая WAN</p>
-            </div>
-
-            <div class="retro-box">
-                <h3>Основные протоколы</h3>
-                <p><span class="highlight">TCP/IP:</span> Transmission Control Protocol / Internet Protocol — основа Интернета. TCP обеспечивает надежную доставку, IP — адресацию и маршрутизацию</p>
-                <p><span class="highlight">HTTP/HTTPS:</span> Протоколы передачи веб-страниц (S — защищенная версия с шифрованием)</p>
-                <p><span class="highlight">FTP:</span> File Transfer Protocol — протокол передачи файлов</p>
-                <p><span class="highlight">DNS:</span> Domain Name System — система преобразования доменных имен в IP-адреса</p>
-            </div>
-
-            <h3 style="text-align: center;">Топологии сетей:</h3>
-            <div class="topology-grid">
-                <div class="topology-item">
-                    <div style="font-size: 3em;">⭐</div>
-                    <p><strong>Звезда</strong></p>
-                    <p style="font-size: 0.9em;">Все узлы связаны с центральным коммутатором. Отказ одного узла не влияет на остальные</p>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-primary btn-lg px-4" id="prevBtn" onclick="prevSlide()">
+                        <i class="bi bi-arrow-left me-2"></i>Назад
+                    </button>
+                    <button class="btn btn-primary btn-lg px-4" id="nextBtn" onclick="nextSlide()">
+                        Вперед<i class="bi bi-arrow-right ms-2"></i>
+                    </button>
                 </div>
-                <div class="topology-item">
-                    <div style="font-size: 3em;">━━━</div>
-                    <p><strong>Шина</strong></p>
-                    <p style="font-size: 0.9em;">Линейное соединение через общий кабель. Простая, но уязвимая к обрывам</p>
-                </div>
-                <div class="topology-item">
-                    <div style="font-size: 3em;">⭕</div>
-                    <p><strong>Кольцо</strong></p>
-                    <p style="font-size: 0.9em;">Замкнутая цепь. Данные идут в одном направлении</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Слайд 3: Как работают -->
-        <div class="slide" id="slide3">
-            <h2>⚡ Как работают компьютерные сети</h2>
-            
-            <div class="retro-box">
-                <h3>Модель OSI (7 уровней)</h3>
-                <p><strong>7. Прикладной:</strong> HTTP, FTP, SMTP — взаимодействие с приложениями</p>
-                <p><strong>6. Представительский:</strong> Шифрование, сжатие данных</p>
-                <p><strong>5. Сеансовый:</strong> Установка и управление сеансами связи</p>
-                <p><strong>4. Транспортный:</strong> TCP, UDP — надежная доставка данных</p>
-                <p><strong>3. Сетевой:</strong> IP, маршрутизация пакетов</p>
-                <p><strong>2. Канальный:</strong> Ethernet, Wi-Fi — передача по физической среде</p>
-                <p><strong>1. Физический:</strong> Кабели, радиоволны, световые сигналы</p>
-            </div>
-
-            <h3>Принцип передачи данных</h3>
-            <div class="info-section">
-                <p><strong>Шаг 1:</strong> Приложение создает данные (например, отправка письма)</p>
-                <p><strong>Шаг 2:</strong> Данные разбиваются на пакеты размером 500-1500 байт</p>
-                <p><strong>Шаг 3:</strong> Каждый пакет получает заголовок с IP-адресом отправителя и получателя</p>
-                <p><strong>Шаг 4:</strong> Маршрутизаторы направляют пакеты по оптимальному пути</p>
-                <p><strong>Шаг 5:</strong> Пакеты могут идти разными путями и прибыть в разном порядке</p>
-                <p><strong>Шаг 6:</strong> Получатель собирает пакеты в правильном порядке и проверяет целостность</p>
-            </div>
-
-            <h3 style="text-align: center; margin-top: 30px;">Визуализация передачи пакета:</h3>
-            <div class="animation-area">
-                <div class="computer computer-a">🖥️</div>
-                <div class="computer computer-b">💻</div>
-                <div class="packet"></div>
-            </div>
-            <p style="text-align: center; margin-top: 15px; font-style: italic;">
-                Красный круг — пакет данных, движущийся от компьютера к компьютеру через сеть
-            </p>
-        </div>
-
-        <!-- Слайд 4: Применение -->
-        <div class="slide" id="slide4">
-            <h2>🌐 Применение компьютерных сетей</h2>
-            
-            <div class="retro-box">
-                <h3>Образование и наука</h3>
-                <p><strong>Школы и университеты:</strong> Дистанционное обучение, электронные библиотеки, обмен учебными материалами, видеолекции, совместные проекты студентов</p>
-                <p><strong>Исследовательские институты:</strong> Обработка больших данных, совместная работа ученых из разных стран, доступ к суперкомпьютерам, публикация научных работ</p>
-            </div>
-
-            <div class="retro-box">
-                <h3>Бизнес и коммерция</h3>
-                <p><strong>Офисная работа:</strong> Электронная почта, видеоконференции, облачное хранение документов, удаленная работа</p>
-                <p><strong>Электронная коммерция:</strong> Интернет-магазины, онлайн-банкинг, электронные платежи, система бронирования</p>
-                <p><strong>Логистика:</strong> Отслеживание посылок, управление складами, оптимизация маршрутов доставки</p>
-            </div>
-
-            <div class="retro-box">
-                <h3>Развлечения и коммуникации</h3>
-                <p><strong>Социальные сети:</strong> Общение с друзьями и семьей по всему миру</p>
-                <p><strong>Стриминг:</strong> Музыка, фильмы, видео по запросу</p>
-                <p><strong>Игры:</strong> Многопользовательские онлайн-игры, облачный гейминг</p>
-            </div>
-
-            <div class="retro-box">
-                <h3>Умные технологии</h3>
-                <p><strong>Умный дом:</strong> Управление освещением, температурой, безопасностью через интернет</p>
-                <p><strong>IoT (Интернет вещей):</strong> Подключенные датчики, носимые устройства, умные часы</p>
-                <p><strong>Умные города:</strong> Управление трафиком, мониторинг экологии, умное освещение улиц</p>
-            </div>
-
-            <h3>Сетевое оборудование</h3>
-            <div class="info-section">
-                <p>🔌 <strong>Роутеры (маршрутизаторы):</strong> Определяют оптимальный путь для пакетов данных между сетями</p>
-                <p>🔀 <strong>Коммутаторы (свитчи):</strong> Соединяют устройства внутри локальной сети</p>
-                <p>🔗 <strong>Сетевые кабели:</strong> Витая пара (Ethernet), оптоволокно — физическое соединение</p>
-                <p>📡 <strong>Wi-Fi точки доступа:</strong> Беспроводная связь для мобильных устройств</p>
-                <p>💾 <strong>Серверы:</strong> Мощные компьютеры для хранения и обработки данных</p>
-                <p>🛡️ <strong>Межсетевые экраны (Firewall):</strong> Защита сети от несанкционированного доступа</p>
-            </div>
-        </div>
-
-        <!-- Слайд 5: Тест (10 вопросов) -->
-        <div class="slide" id="slide5">
-            <h2>❓ Тест: Проверь свои знания!</h2>
-            <p style="margin-bottom: 20px;">Ответь на все 10 вопросов и получи результат:</p>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressBar" style="width: 0%"></div>
-            </div>
-            <p style="text-align: center; margin-bottom: 30px;" id="questionCounter">Вопрос 0 из 10</p>
-            
-            <!-- Вопрос 1 -->
-            <div class="quiz-question">
-                <p><strong>1. Что означает аббревиатура LAN?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 1)">A) Длинная антенная сеть</div>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 1)">B) Локальная вычислительная сеть</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 1)">C) Линейная аналоговая система</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 1)">D) Лазерная навигационная сеть</div>
-            </div>
-
-            <!-- Вопрос 2 -->
-            <div class="quiz-question">
-                <p><strong>2. В каком году была создана сеть ARPANET?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 2)">A) 1959</div>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 2)">B) 1969</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 2)">C) 1979</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 2)">D) 1989</div>
-            </div>
-
-            <!-- Вопрос 3 -->
-            <div class="quiz-question">
-                <p><strong>3. Как называются небольшие части данных при передаче по сети?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 3)">A) Сегменты</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 3)">B) Блоки</div>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 3)">C) Пакеты</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 3)">D) Фрагменты</div>
-            </div>
-
-            <!-- Вопрос 4 -->
-            <div class="quiz-question">
-                <p><strong>4. Сколько уровней в модели OSI?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 4)">A) 5</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 4)">B) 6</div>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 4)">C) 7</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 4)">D) 8</div>
-            </div>
-
-            <!-- Вопрос 5 -->
-            <div class="quiz-question">
-                <p><strong>5. Что означает протокол TCP?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 5)">A) Transmission Control Protocol</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 5)">B) Transfer Connection Protocol</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 5)">C) Terminal Command Protocol</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 5)">D) Total Computer Protocol</div>
-            </div>
-
-            <!-- Вопрос 6 -->
-            <div class="quiz-question">
-                <p><strong>6. Кто создал всемирную паутину (WWW)?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 6)">A) Билл Гейтс</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 6)">B) Стив Джобс</div>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 6)">C) Тим Бернерс-Ли</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 6)">D) Линус Торвальдс</div>
-            </div>
-
-            <!-- Вопрос 7 -->
-            <div class="quiz-question">
-                <p><strong>7. Какое устройство определяет оптимальный путь для пакетов между сетями?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 7)">A) Коммутатор (Switch)</div>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 7)">B) Маршрутизатор (Router)</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 7)">C) Модем</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 7)">D) Концентратор (Hub)</div>
-            </div>
-
-            <!-- Вопрос 8 -->
-            <div class="quiz-question">
-                <p><strong>8. Что такое DNS?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 8)">A) Протокол шифрования данных</div>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 8)">B) Система преобразования доменных имен в IP-адреса</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 8)">C) Тип сетевого кабеля</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 8)">D) Беспроводная технология передачи данных</div>
-            </div>
-
-            <!-- Вопрос 9 -->
-            <div class="quiz-question">
-                <p><strong>9. Какая топ<parameter name="content">ология сети имеет центральный узел, к которому подключены все остальные?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 9)">A) Шина</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 9)">B) Кольцо</div>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 9)">C) Звезда</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 9)">D) Сетка</div>
-            </div>
-
-            <!-- Вопрос 10 -->
-            <div class="quiz-question">
-                <p><strong>10. Что означает IoT (Internet of Things)?</strong></p>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 10)">A) Протокол безопасности</div>
-                <div class="quiz-option" onclick="checkAnswer(this, true, 10)">B) Интернет вещей — сеть подключенных устройств</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 10)">C) Тип беспроводного соединения</div>
-                <div class="quiz-option" onclick="checkAnswer(this, false, 10)">D) Оптическая технология передачи</div>
-            </div>
-        </div>
-
-        <!-- Слайд 6: Результаты теста -->
-        <div class="slide" id="slide6">
-            <h2>🎯 Результаты теста</h2>
-            <div class="result-box">
-                <p style="font-size: 1.5em; color: #5dade2;">Ваш результат:</p>
-                <div class="result-score" id="finalScore">0/10</div>
-                <div class="result-grade" id="gradeText">...</div>
-                <div class="result-message" id="resultMessage">...</div>
-                <button class="retry-btn" onclick="retryQuiz()">🔄 Пройти тест заново</button>
-            </div>
-
-            <div class="retro-box" style="margin-top: 30px;">
-                <h3 style="text-align: center;">Расшифровка оценок:</h3>
-                <p><strong>9-10 баллов:</strong> 🏆 Отлично! Вы эксперт в компьютерных сетях!</p>
-                <p><strong>7-8 баллов:</strong> ✅ Хорошо! Твердые знания по теме.</p>
-                <p><strong>5-6 баллов:</strong> 📚 Удовлетворительно. Рекомендуем повторить материал.</p>
-                <p><strong>0-4 балла:</strong> 📖 Нужно больше практики. Пройдите презентацию еще раз!</p>
-            </div>
-        </div>
-
-        <!-- Слайд 7: Заключение -->
-        <div class="slide" id="slide7">
-            <h2>🎯 Заключение</h2>
-            <div class="retro-box" style="text-align: center; padding: 40px;">
-                <p style="font-size: 1.8em; margin-bottom: 20px;">
-                    <span class="highlight">Компьютерные сети</span> изменили мир
-                </p>
-                <p style="font-size: 1.3em; line-height: 2;">
-                    От первых экспериментов в ленинградских лабораториях<br>
-                    до глобального Интернета, соединяющего миллиарды устройств
-                </p>
-            </div>
-
-            <div class="info-section" style="margin-top: 30px;">
-                <h3>Что мы узнали:</h3>
-                <p>✓ Историю развития сетей от ARPANET до современного Интернета</p>
-                <p>✓ Типы сетей: PAN, LAN, MAN, WAN и их применение</p>
-                <p>✓ Основные протоколы: TCP/IP, HTTP, DNS, FTP</p>
-                <p>✓ Модель OSI и принципы передачи данных</p>
-                <p>✓ Топологии сетей: звезда, шина, кольцо</p>
-                <p>✓ Практическое применение в образовании, бизнесе, жизни</p>
-                <p>✓ Сетевое оборудование и технологии</p>
-            </div>
-
-            <div class="retro-box" style="text-align: center; padding: 30px; margin-top: 30px;">
-                <p style="font-size: 1.4em; color: #5dade2;">
-                    Сети делают нашу жизнь связанной,<br>
-                    открывают новые возможности<br>
-                    и сближают людей по всему миру! 🌍
-                </p>
-                <p style="font-size: 1.2em; margin-top: 30px;">
-                    Спасибо за внимание! 🚀
-                </p>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="navigation">
-        <button class="nav-btn" id="prevBtn" onclick="prevSlide()">◄ Назад</button>
-        <button class="nav-btn" id="nextBtn" onclick="nextSlide()">Вперед ►</button>
-    </div>
+<script>
+    // Основные переменные
+    let currentSlide = 0;
+    const totalSlides = 8;
+    let quizScore = 0;
+    let answeredQuestions = new Set();
+    let totalQuestions = 10;
+    let wrongAnswers = 0;
 
-    <script>
-        let currentSlide = 0;
-        const totalSlides = 8;
-        let quizScore = 0;
-        let answeredQuestions = new Set();
-        let totalQuestions = 10;
+    // Функции
+    function updateSlideCounter() {
+        document.getElementById('currentSlide').textContent = currentSlide + 1;
+        document.getElementById('totalSlides').textContent = totalSlides;
 
-        function updateSlideCounter() {
-            document.getElementById('currentSlide').textContent = currentSlide;
-            document.getElementById('totalSlides').textContent = totalSlides - 1;
-        }
+        // Обновляем прогресс-бар
+        const progress = ((currentSlide + 1) / totalSlides) * 100;
+        document.getElementById('globalProgress').style.width = progress + '%';
+    }
 
-        function updateProgressBar() {
-            const progress = (answeredQuestions.size / totalQuestions) * 100;
-            document.getElementById('progressBar').style.width = progress + '%';
-            document.getElementById('questionCounter').textContent = 
-                `Вопрос ${answeredQuestions.size} из ${totalQuestions}`;
-        }
+    function updateProgressBar() {
+        const progress = (answeredQuestions.size / totalQuestions) * 100;
+        document.getElementById('progressBar').style.width = progress + '%';
+        document.getElementById('questionCounter').textContent =
+            `${answeredQuestions.size}/${totalQuestions}`;
+    }
 
-        function showSlide(n) {
-            const slides = document.querySelectorAll('.slide');
-            slides.forEach(slide => slide.classList.remove('active'));
-            
-            if (n >= totalSlides) {
-                currentSlide = totalSlides - 1;
-            } else if (n < 0) {
-                currentSlide = 0;
-            } else {
-                currentSlide = n;
-            }
-            
-            slides[currentSlide].classList.add('active');
-            
-            document.getElementById('prevBtn').disabled = currentSlide === 0;
-            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
-            
-            updateSlideCounter();
-        }
-
-        function nextSlide() {
-            if (currentSlide === 5 && answeredQuestions.size < totalQuestions) {
-                alert('Пожалуйста, ответьте на все вопросы теста!');
-                return;
-            }
-            if (currentSlide === 5) {
-                showResults();
-            }
-            showSlide(currentSlide + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-
-        function checkAnswer(element, isCorrect, questionNum) {
-            if (answeredQuestions.has(questionNum)) {
-                return;
-            }
-            
-            answeredQuestions.add(questionNum);
-            
-            const questionBox = element.parentElement;
-            const allOptions = questionBox.querySelectorAll('.quiz-option');
-            
-            if (isCorrect) {
-                element.classList.add('correct');
-                quizScore++;
-            } else {
-                element.classList.add('incorrect');
-                allOptions.forEach(opt => {
-                    if (opt.onclick.toString().includes('true')) {
-                        opt.classList.add('correct');
-                    }
-                });
-            }
-            
-            allOptions.forEach(opt => opt.style.pointerEvents = 'none');
-            
-            updateProgressBar();
-        }
-
-        function showResults() {
-            const percentage = (quizScore / totalQuestions) * 100;
-            let grade = '';
-            let message = '';
-            let scoreColor = '';
-
-            if (quizScore >= 9) {
-                grade = '🏆 ОТЛИЧНО!';
-                message = 'Поздравляем! Вы отлично разбираетесь в компьютерных сетях! Ваши знания на высшем уровне.';
-                scoreColor = '#2ecc71';
-            } else if (quizScore >= 7) {
-                grade = '✅ ХОРОШО!';
-                message = 'Отличный результат! У вас твердые знания по теме. Небольшая практика — и вы станете экспертом!';
-                scoreColor = '#3498db';
-            } else if (quizScore >= 5) {
-                grade = '📚 УДОВЛЕТВОРИТЕЛЬНО';
-                message = 'Неплохо! Базовые знания есть, но рекомендуем повторить материал и пройти презентацию еще раз.';
-                scoreColor = '#f39c12';
-            } else {
-                grade = '📖 НУЖНО ПОДУЧИТЬ';
-                message = 'Не расстраивайтесь! Вернитесь к началу презентации, внимательно изучите материал и попробуйте снова.';
-                scoreColor = '#e74c3c';
-            }
-
-            document.getElementById('finalScore').textContent = quizScore + '/10';
-            document.getElementById('finalScore').style.color = scoreColor;
-            document.getElementById('gradeText').textContent = grade;
-            document.getElementById('resultMessage').textContent = message;
-        }
-
-        function retryQuiz() {
-            quizScore = 0;
-            answeredQuestions.clear();
-            
-            const allQuestions = document.querySelectorAll('.quiz-question');
-            allQuestions.forEach(question => {
-                const options = question.querySelectorAll('.quiz-option');
-                options.forEach(opt => {
-                    opt.classList.remove('correct', 'incorrect');
-                    opt.style.pointerEvents = 'auto';
-                });
-            });
-            
-            updateProgressBar();
-            showSlide(5);
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') nextSlide();
-            if (e.key === 'ArrowLeft') prevSlide();
+    function showSlide(n) {
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+            slide.classList.remove('animate__animated');
         });
 
-        showSlide(0);
-    </script>
-</body>
-<script src="app.js"> </script>
+        if (n >= totalSlides) {
+            currentSlide = totalSlides - 1;
+        } else if (n < 0) {
+            currentSlide = 0;
+        } else {
+            currentSlide = n;
+        }
+
+        const activeSlide = slides[currentSlide];
+        activeSlide.classList.add('active');
+        activeSlide.classList.add('animate__animated');
+
+        // Добавляем разные анимации для слайдов
+        const animations = ['slideInRight', 'slideInLeft', 'slideInUp', 'fadeIn'];
+        const animation = animations[Math.floor(Math.random() * animations.length)];
+        activeSlide.classList.add(animation);
+
+        // Обновляем состояние кнопок
+        document.getElementById('prevBtn').disabled = currentSlide === 0;
+        document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+
+        updateSlideCounter();
+
+        // Если это слайд с результатами, обновляем статистику
+        if (currentSlide === 6) {
+            updateStatistics();
+        }
+    }
+
+    function nextSlide() {
+        if (currentSlide === 5 && answeredQuestions.size < totalQuestions) {
+            alert('Пожалуйста, ответьте на все вопросы теста!');
+            return;
+        }
+        if (currentSlide === 5) {
+            showResults();
+        }
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    function checkAnswer(element, isCorrect, questionNum) {
+        if (answeredQuestions.has(questionNum)) {
+            return;
+        }
+
+        answeredQuestions.add(questionNum);
+
+        const questionBox = element.closest('.quiz-question');
+        const allButtons = questionBox.querySelectorAll('button');
+
+        // Добавляем визуальную обратную связь
+        if (isCorrect) {
+            element.classList.remove('btn-outline-primary');
+            element.classList.add('btn-success');
+            quizScore++;
+        } else {
+            element.classList.remove('btn-outline-primary');
+            element.classList.add('btn-danger');
+            wrongAnswers++;
+
+            // Показываем правильный ответ
+            allButtons.forEach(btn => {
+                if (btn.onclick && btn.onclick.toString().includes('true')) {
+                    btn.classList.remove('btn-outline-primary');
+                    btn.classList.add('btn-success');
+                }
+            });
+        }
+
+        // Отключаем все кнопки в этом вопросе
+        allButtons.forEach(btn => {
+            btn.disabled = true;
+        });
+
+        updateProgressBar();
+    }
+
+    function showResults() {
+        const percentage = (quizScore / totalQuestions) * 100;
+        let grade = '';
+        let message = '';
+        let scoreColor = '';
+
+        if (quizScore >= 9) {
+            grade = '🏆 ОТЛИЧНО!';
+            message = 'Поздравляем! Вы отлично разбираетесь в компьютерных сетях! Ваши знания на высшем уровне.';
+            scoreColor = '#2ecc71';
+        } else if (quizScore >= 7) {
+            grade = '✅ ХОРОШО!';
+            message = 'Отличный результат! У вас твердые знания по теме. Небольшая практика — и вы станете экспертом!';
+            scoreColor = '#3498db';
+        } else if (quizScore >= 5) {
+            grade = '📚 УДОВЛЕТВОРИТЕЛЬНО';
+            message = 'Неплохо! Базовые знания есть, но рекомендуем повторить материал и пройти презентацию еще раз.';
+            scoreColor = '#f39c12';
+        } else {
+            grade = '📖 НУЖНО ПОДУЧИТЬ';
+            message = 'Не расстраивайтесь! Вернитесь к началу презентации, внимательно изучите материал и попробуйте снова.';
+            scoreColor = '#e74c3c';
+        }
+
+        document.getElementById('finalScore').textContent = quizScore + '/10';
+        document.getElementById('finalScore').style.color = scoreColor;
+        document.getElementById('gradeText').textContent = grade;
+        document.getElementById('resultMessage').textContent = message;
+    }
+
+    function updateStatistics() {
+        document.getElementById('correctAnswers').textContent = quizScore;
+        document.getElementById('wrongAnswers').textContent = totalQuestions - quizScore;
+        document.getElementById('successRate').textContent =
+            Math.round((quizScore / totalQuestions) * 100) + '%';
+    }
+
+    function retryQuiz() {
+        quizScore = 0;
+        wrongAnswers = 0;
+        answeredQuestions.clear();
+
+        // Сбрасываем все кнопки теста
+        const allQuestions = document.querySelectorAll('.quiz-question');
+        allQuestions.forEach(question => {
+            const buttons = question.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.classList.remove('btn-success', 'btn-danger');
+                btn.classList.add('btn-outline-primary');
+                btn.disabled = false;
+            });
+        });
+
+        updateProgressBar();
+        showSlide(5);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+    });
+
+    showSlide(0);
+</script>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
