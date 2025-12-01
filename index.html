@@ -449,7 +449,7 @@
         </div>
     </div>
 
-    <!-- Slide 3: How Networks Work -->
+    <!-- Slide 3: How Networks Work + Modern Technologies -->
     <div class="slide" id="slide3">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
@@ -461,6 +461,8 @@
                         </h2>
                     </div>
                     <div class="card-body bg-light text-dark p-4 p-md-5">
+
+                        <!-- OSI Model -->
                         <div class="row g-4 mb-4">
                             <div class="col-lg-6">
                                 <div class="card h-100 border-danger">
@@ -476,49 +478,54 @@
                                                  style="background: linear-gradient(90deg, #e74c3c, #c0392b);">
                                                 <span class="layer-number">7</span>
                                                 <span class="layer-name">Прикладной</span>
-                                                <small>HTTP, FTP, SMTP</small>
+                                                <small>HTTP, HTTPS, FTP, SMTP — приложения для обмена
+                                                    информацией</small>
                                             </div>
                                             <div class="osi-layer"
                                                  style="background: linear-gradient(90deg, #e67e22, #d35400);">
                                                 <span class="layer-number">6</span>
                                                 <span class="layer-name">Представительский</span>
-                                                <small>Шифрование, сжатие</small>
+                                                <small>Шифрование, сжатие, кодирование данных для безопасной
+                                                    передачи</small>
                                             </div>
                                             <div class="osi-layer"
                                                  style="background: linear-gradient(90deg, #f39c12, #e67e22);">
                                                 <span class="layer-number">5</span>
                                                 <span class="layer-name">Сеансовый</span>
-                                                <small>Управление сеансами</small>
+                                                <small>Управление сеансами, установление и завершение соединений</small>
                                             </div>
                                             <div class="osi-layer"
                                                  style="background: linear-gradient(90deg, #2ecc71, #27ae60);">
                                                 <span class="layer-number">4</span>
                                                 <span class="layer-name">Транспортный</span>
-                                                <small>TCP, UDP</small>
+                                                <small>TCP/UDP — надежная или быстрая передача данных</small>
                                             </div>
                                             <div class="osi-layer"
                                                  style="background: linear-gradient(90deg, #3498db, #2980b9);">
                                                 <span class="layer-number">3</span>
                                                 <span class="layer-name">Сетевой</span>
-                                                <small>IP, маршрутизация</small>
+                                                <small>IP-адресация, маршрутизация, пакеты проходят через
+                                                    маршрутизаторы</small>
                                             </div>
                                             <div class="osi-layer"
                                                  style="background: linear-gradient(90deg, #9b59b6, #8e44ad);">
                                                 <span class="layer-number">2</span>
                                                 <span class="layer-name">Канальный</span>
-                                                <small>Ethernet, Wi-Fi</small>
+                                                <small>Ethernet, Wi-Fi — фреймы, проверка ошибок</small>
                                             </div>
                                             <div class="osi-layer"
                                                  style="background: linear-gradient(90deg, #34495e, #2c3e50);">
                                                 <span class="layer-number">1</span>
                                                 <span class="layer-name">Физический</span>
-                                                <small>Кабели, радиоволны</small>
+                                                <small>Кабели, радиоволны, оптоволокно — физическая передача
+                                                    сигналов</small>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Data Transmission -->
                             <div class="col-lg-6">
                                 <div class="card h-100 border-success">
                                     <div class="card-header bg-success text-white">
@@ -533,42 +540,48 @@
                                                 <span class="step-number">1</span>
                                                 <div class="step-content">
                                                     <strong>Создание данных</strong>
-                                                    <p class="mb-0 small">Приложение создает данные (письмо, запрос)</p>
+                                                    <p class="mb-0 small">Приложение создает письмо, запрос к сайту или
+                                                        видео.</p>
                                                 </div>
                                             </div>
                                             <div class="step">
                                                 <span class="step-number">2</span>
                                                 <div class="step-content">
                                                     <strong>Разбиение на пакеты</strong>
-                                                    <p class="mb-0 small">Данные разбиваются на пакеты 500-1500 байт</p>
+                                                    <p class="mb-0 small">Данные разбиваются на пакеты 500–1500
+                                                        байт.</p>
                                                 </div>
                                             </div>
                                             <div class="step">
                                                 <span class="step-number">3</span>
                                                 <div class="step-content">
                                                     <strong>Добавление заголовка</strong>
-                                                    <p class="mb-0 small">IP-адреса отправителя и получателя</p>
+                                                    <p class="mb-0 small">IP-адреса отправителя и получателя, порты,
+                                                        контрольные суммы.</p>
                                                 </div>
                                             </div>
                                             <div class="step">
                                                 <span class="step-number">4</span>
                                                 <div class="step-content">
                                                     <strong>Маршрутизация</strong>
-                                                    <p class="mb-0 small">Маршрутизаторы находят оптимальный путь</p>
+                                                    <p class="mb-0 small">Маршрутизаторы выбирают оптимальный путь через
+                                                        сеть.</p>
                                                 </div>
                                             </div>
                                             <div class="step">
                                                 <span class="step-number">5</span>
                                                 <div class="step-content">
                                                     <strong>Передача</strong>
-                                                    <p class="mb-0 small">Пакеты идут разными путями</p>
+                                                    <p class="mb-0 small">Пакеты идут разными путями через Wi-Fi,
+                                                        Ethernet, оптоволокно, 4G/5G.</p>
                                                 </div>
                                             </div>
                                             <div class="step">
                                                 <span class="step-number">6</span>
                                                 <div class="step-content">
                                                     <strong>Сборка</strong>
-                                                    <p class="mb-0 small">Сборка и проверка целостности</p>
+                                                    <p class="mb-0 small">На стороне получателя пакеты собираются и
+                                                        проверяется целостность.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -577,6 +590,7 @@
                             </div>
                         </div>
 
+                        <!-- Packet Visualization -->
                         <div class="card border-primary mt-4">
                             <div class="card-header bg-primary text-white">
                                 <h5 class="mb-0">
@@ -590,10 +604,7 @@
                                         <i class="bi bi-pc-display-horizontal fs-1"></i>
                                         <div class="computer-label">Отправитель</div>
                                     </div>
-                                    <div class="packet" style="
-
-        animation: movePacket 5s linear infinite;
-    ">
+                                    <div class="packet" style="animation: movePacket 5s linear infinite;">
                                         <i class="bi bi-envelope-fill"></i>
                                     </div>
                                     <div class="network-path"></div>
@@ -604,10 +615,101 @@
                                 </div>
                                 <p class="text-muted mb-0">
                                     <i class="bi bi-info-circle me-1"></i>
-                                    Красный конверт — пакет данных, движущийся через сеть
+                                    Красный конверт — пакет данных через сеть с использованием TCP/IP, Wi-Fi, Ethernet.
                                 </p>
                             </div>
                         </div>
+
+                        <!-- Modern Network Technologies -->
+                        <h4 class="text-center mt-5 mb-4 text-primary">
+                            <i class="bi bi-rocket-takeoff me-2"></i>
+                            Современные технологии
+                        </h4>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-info text-center animate__animated animate__fadeInUp">
+                                    <div class="card-body">
+                                        <i class="bi bi-wifi fs-1 mb-2 text-info"></i>
+                                        <h5 class="card-title">Wi-Fi & 5G</h5>
+                                        <p class="card-text small">
+                                            Беспроводная передача данных. 5G обеспечивает высокую скорость и низкую
+                                            задержку.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-primary text-center animate__animated animate__fadeInUp animate__delay-1s">
+                                    <div class="card-body">
+                                        <i class="bi bi-server fs-1 mb-2 text-primary"></i>
+                                        <h5 class="card-title">Облако & Протоколы</h5>
+                                        <p class="card-text small">
+                                            Облачные сервисы (AWS, Google Cloud) + протоколы HTTP, HTTPS, SMTP, MQTT для
+                                            обмена данными.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-success text-center animate__animated animate__fadeInUp animate__delay-2s">
+                                    <div class="card-body">
+                                        <i class="bi bi-shield-lock fs-1 mb-2 text-success"></i>
+                                        <h5 class="card-title">Безопасность</h5>
+                                        <p class="card-text small">
+                                            VPN, шифрование TLS/SSL, firewall. Защита данных и приватность
+                                            пользователей.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-4 mt-4">
+
+
+                            <!-- SMTP / HTTP -->
+                            <div class="col-md-4">
+                                <div class="card h-100 border-primary text-center animate__animated animate__fadeInUp animate__delay-1s">
+                                    <div class="card-body">
+                                        <i class="bi bi-server fs-1 mb-2 text-primary"></i>
+                                        <h5 class="card-title">SMTP / HTTP</h5>
+                                        <p class="card-text small">
+                                            SMTP — протокол для отправки почты, HTTP/HTTPS — для веб-сайтов.
+                                            Позволяют приложениям обмениваться информацией.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cloud / Облако -->
+                            <div class="col-md-4">
+                                <div class="card h-100 border-warning text-center animate__animated animate__fadeInUp animate__delay-3s">
+                                    <div class="card-body">
+                                        <i class="bi bi-cloud fs-1 mb-2 text-warning"></i>
+                                        <h5 class="card-title">Облачные сети</h5>
+                                        <p class="card-text small">
+                                            Данные и приложения хранятся в облаке. Обеспечивает доступ с любого
+                                            устройства и безопасное хранение.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- IoT / Умные устройства -->
+                            <div class="col-md-4">
+                                <div class="card h-100 border-secondary text-center animate__animated animate__fadeInUp animate__delay-4s">
+                                    <div class="card-body">
+                                        <i class="bi bi-robot fs-1 mb-2 text-secondary"></i>
+                                        <h5 class="card-title">IoT</h5>
+                                        <p class="card-text small">
+                                            Умные устройства обмениваются данными через интернет. Применение в домах,
+                                            городах и промышленности.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -626,7 +728,10 @@
                         </h2>
                     </div>
                     <div class="card-body bg-light text-dark p-4 p-md-5">
-                        <div class="row g-4">
+
+                        <!-- Основные сферы -->
+                        <div class="row g-3">
+                            <!-- Образование -->
                             <div class="col-md-6 col-lg-3">
                                 <div class="card h-100 border-info">
                                     <div class="card-body text-center">
@@ -634,13 +739,14 @@
                                         <h5 class="card-title">Образование</h5>
                                         <p class="card-text small">
                                             Дистанционное обучение, электронные библиотеки,
-                                            видеолекции, совместные проекты
+                                            видеолекции, совместные проекты, онлайн-курсы.
                                         </p>
                                         <span class="badge bg-info">E-Learning</span>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Бизнес -->
                             <div class="col-md-6 col-lg-3">
                                 <div class="card h-100 border-success">
                                     <div class="card-body text-center">
@@ -648,35 +754,37 @@
                                         <h5 class="card-title">Бизнес</h5>
                                         <p class="card-text small">
                                             Видеоконференции, облачные решения,
-                                            онлайн-банкинг, электронная коммерция
+                                            онлайн-банкинг, электронная коммерция, CRM-системы.
                                         </p>
                                         <span class="badge bg-success">E-Commerce</span>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Развлечения -->
                             <div class="col-md-6 col-lg-3">
                                 <div class="card h-100 border-warning">
                                     <div class="card-body text-center">
                                         <i class="bi bi-controller text-warning fs-1 mb-3"></i>
                                         <h5 class="card-title">Развлечения</h5>
                                         <p class="card-text small">
-                                            Социальные сети, стриминг,
-                                            онлайн-игры, медиа контент
+                                            Социальные сети, стриминг, онлайн-игры, медиа контент,
+                                            VR/AR сервисы.
                                         </p>
                                         <span class="badge bg-warning">Streaming</span>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Умные технологии -->
                             <div class="col-md-6 col-lg-3">
                                 <div class="card h-100 border-danger">
                                     <div class="card-body text-center">
                                         <i class="bi bi-house-gear-fill text-danger fs-1 mb-3"></i>
                                         <h5 class="card-title">Умные технологии</h5>
                                         <p class="card-text small">
-                                            Умный дом, IoT устройства,
-                                            носимые гаджеты, умные города
+                                            Умный дом, IoT устройства, носимые гаджеты, умные города,
+                                            AI системы, умное производство.
                                         </p>
                                         <span class="badge bg-danger">IoT</span>
                                     </div>
@@ -684,6 +792,7 @@
                             </div>
                         </div>
 
+                        <!-- Сетевое оборудование -->
                         <div class="mt-5">
                             <h4 class="text-center mb-4">
                                 <i class="bi bi-hdd-rack me-2 text-secondary"></i>
@@ -728,6 +837,19 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Современные тренды -->
+                        <div class="mt-5 text-center">
+                            <h5 class="mb-3">
+                                <i class="bi bi-lightning-fill me-2 text-warning"></i>
+                                Современные тренды
+                            </h5>
+                            <p class="small text-muted">
+                                5G, облачные сервисы, IoT, AI в сетях, кибербезопасность, edge computing —
+                                формируют будущее компьютерных сетей и их применения в разных сферах.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>
