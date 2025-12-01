@@ -301,6 +301,7 @@
                     </div>
                     <div class="card-body bg-light text-dark p-4 p-md-5">
                         <div class="row g-4 mb-4">
+                            <!-- Типы сетей по масштабу -->
                             <div class="col-md-6">
                                 <div class="card h-100 border-primary">
                                     <div class="card-header bg-primary text-white">
@@ -313,25 +314,37 @@
                                         <ul class="list-group list-group-flush">
                                             <li class="list-group-item">
                                                 <span class="badge bg-info me-2">PAN</span>
-                                                Персональная сеть (Bluetooth, USB)
+                                                Персональная сеть. Объединяет устройства в пределах одного человека:
+                                                смартфон, ноутбук, принтер. Например, Bluetooth и USB соединения.
+                                                <small class="d-block text-muted">Применение: подключение аксессуаров и
+                                                    носимых устройств.</small>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="badge bg-success me-2">LAN</span>
-                                                Локальная сеть (офис, дом)
+                                                Локальная сеть. Объединяет компьютеры в доме, офисе или учебном
+                                                заведении. Высокая скорость передачи данных.
+                                                <small class="d-block text-muted">Применение: совместная работа с
+                                                    файлами, принтерами и внутренними серверами.</small>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="badge bg-warning me-2">MAN</span>
-                                                Городская сеть
+                                                Городская сеть. Покрывает несколько зданий или район города. Часто
+                                                используется для университетов и компаний.
+                                                <small class="d-block text-muted">Применение: соединение филиалов,
+                                                    корпоративные сети.</small>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="badge bg-danger me-2">WAN</span>
-                                                Глобальная сеть (Интернет)
+                                                Глобальная сеть, соединяющая страны и континенты. Пример — Интернет.
+                                                <small class="d-block text-muted">Применение: обмен информацией между
+                                                    удалёнными офисами и пользователями по всему миру.</small>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Основные протоколы -->
                             <div class="col-md-6">
                                 <div class="card h-100 border-info">
                                     <div class="card-header bg-info text-white">
@@ -344,19 +357,28 @@
                                         <ul class="list-group list-group-flush">
                                             <li class="list-group-item">
                                                 <span class="badge bg-dark me-2">TCP/IP</span>
-                                                Основа Интернета
+                                                Базовый протокол Интернета. Обеспечивает передачу данных между
+                                                компьютерами по сети.
+                                                <small class="d-block text-muted">Гарантирует доставку и правильный
+                                                    порядок пакетов.</small>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="badge bg-primary me-2">HTTP/S</span>
-                                                Веб-протоколы
+                                                Протокол передачи веб-страниц. HTTPS — защищённый вариант.
+                                                <small class="d-block text-muted">Используется браузерами для загрузки
+                                                    сайтов.</small>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="badge bg-success me-2">FTP</span>
-                                                Передача файлов
+                                                Протокол для передачи файлов между устройствами.
+                                                <small class="d-block text-muted">Применяется для загрузки сайтов на
+                                                    сервер и обмена большими файлами.</small>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="badge bg-warning me-2">DNS</span>
-                                                Система доменных имен
+                                                Система доменных имён. Преобразует адрес сайта в IP для поиска сервера.
+                                                <small class="d-block text-muted">Обеспечивает работу сайтов без
+                                                    запоминания числовых адресов.</small>
                                             </li>
                                         </ul>
                                     </div>
@@ -370,42 +392,51 @@
                         </h4>
 
                         <div class="row g-4">
+                            <!-- Звезда -->
                             <div class="col-md-4">
                                 <div class="card text-center h-100 border-warning animate__animated animate__pulse">
                                     <div class="card-body">
                                         <div class="display-1 mb-3">⭐</div>
                                         <h5 class="card-title text-warning">Звезда</h5>
                                         <p class="card-text">
-                                            Все узлы связаны с центральным коммутатором.
-                                            Отказ одного узла не влияет на остальные.
+                                            Все узлы подключены к центральному коммутатору или маршрутизатору.
+                                            Если один узел выйдет из строя, остальные продолжают работать.
+                                            <small class="d-block text-muted">Применение: офисные и домашние сети, Wi-Fi
+                                                роутеры.</small>
                                         </p>
                                         <span class="badge bg-warning">Надежность</span>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Шина -->
                             <div class="col-md-4">
                                 <div class="card text-center h-100 border-info animate__animated animate__pulse animate__delay-1s">
                                     <div class="card-body">
                                         <div class="display-1 mb-3">━━━</div>
                                         <h5 class="card-title text-info">Шина</h5>
                                         <p class="card-text">
-                                            Линейное соединение через общий кабель.
-                                            Простая, но уязвимая к обрывам.
+                                            Все компьютеры подключены к одному кабелю. Простая и экономичная топология,
+                                            но если кабель повреждён — сеть падает.
+                                            <small class="d-block text-muted">Применение: простые локальные сети,
+                                                учебные лаборатории.</small>
                                         </p>
                                         <span class="badge bg-info">Простота</span>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Кольцо -->
                             <div class="col-md-4">
                                 <div class="card text-center h-100 border-success animate__animated animate__pulse animate__delay-2s">
                                     <div class="card-body">
                                         <div class="display-1 mb-3">⭕</div>
                                         <h5 class="card-title text-success">Кольцо</h5>
                                         <p class="card-text">
-                                            Замкнутая цепь. Данные идут в одном направлении.
-                                            Равномерное распределение нагрузки.
+                                            Узлы соединены в замкнутую цепь. Данные движутся в одном направлении,
+                                            нагрузка распределяется равномерно.
+                                            <small class="d-block text-muted">Применение: корпоративные сети, старые
+                                                Token Ring сети.</small>
                                         </p>
                                         <span class="badge bg-success">Баланс</span>
                                     </div>
